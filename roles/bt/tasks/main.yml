@@ -1,0 +1,49 @@
+---
+- name: install expect
+  yum:
+    name: expect
+    state: latest
+  when: ansible_distribution == "CentOS"
+
+- name: install expect for ubuntu
+  apt:
+    name: expect
+    state: latest
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+
+- name: install python-pexpect
+  pip:
+    name: pexpect
+
+- name: download install.sh for CentOS
+  get_url:
+    url: http://download.bt.cn/install/install_6.0.sh
+    dest: /root/install.sh
+    mode: '0644'
+  when: ansible_distribution == "CentOS"
+
+- name: download install.sh for Ubuntu
+  get_url:
+    url: http://download.bt.cn/install/install-ubuntu_6.0.sh
+    dest: /root/install.sh
+    mode: '0644'
+  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+
+
+- name: copy username.exp
+  copy: src={{item}}  dest=/root/{{item}}  mode=0644
+  with_items: "{{filelist}}"
+
+- name: install bt & change username & password
+  command: expect /root/{{item}}
+  with_items: "{{filelist}}"
+
+- name: remove extra files 
+  shell: rm -f item /root/*
+
+- name: close bt-panel security login
+  file:
+    path: /www/server/panel/data/admin_path.pl
+    state: absent
+
+
