@@ -6,7 +6,7 @@
 
 ## 配置要求
 
-操作系统：目支持Ubuntu18.x 或 CentOS7.x 以上部署此脚本  
+操作系统：目支持 CentOS7.x, Ubuntu, Debian 以上部署此脚本，确保是干净的操作系统，没有安装过其它环境带的Apache/Nginx/php/MySQL 
 硬件配置：最低1核1G，10G系统盘空间，否则无法运行
 
 ## 组件
