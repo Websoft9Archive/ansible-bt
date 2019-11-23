@@ -22,7 +22,7 @@
     mode: '0644'
   when: ansible_distribution == "CentOS" and {{language_ver}} == 'zh'
 
-  - name: download English install.sh for CentOS
+- name: download English install.sh for CentOS
   get_url:
     url: http://www.aapanel.com/script/install_6.0_en.sh
     dest: /root/install.sh
