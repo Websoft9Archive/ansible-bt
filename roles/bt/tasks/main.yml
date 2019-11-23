@@ -15,6 +15,7 @@
   pip:
     name: pexpect
 
+##------ download script start ------ ###
 - name: download Chinese install.sh for CentOS
   get_url:
     url: http://download.bt.cn/install/install_6.0.sh
@@ -29,13 +30,23 @@
     mode: '0644'
   when: ansible_distribution == "CentOS" and {{language_ver}} == 'en'
 
-- name: download install.sh for Ubuntu
+- name: download Chinese install.sh for Ubuntu&Debian
   get_url:
     url: http://download.bt.cn/install/install-ubuntu_6.0.sh
     dest: /root/install.sh
     mode: '0644'
-  when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
+  when: (ansible_distribution == "Ubuntu" and {{language_ver}} == 'zh') or 
+        (ansible_distribution == "Debian" and {{language_ver}} == 'zh')
 
+- name: download English install.sh for Ubuntu&Debian
+  get_url:
+    url: http://www.aapanel.com/script/install-ubuntu_6.0_en.sh
+    dest: /root/install.sh
+    mode: '0644'
+  when: (ansible_distribution == "Ubuntu" and {{language_ver}} == 'en') or 
+        (ansible_distribution == "Debian" and {{language_ver}} == 'en')
+
+##------ download script end ------ ###
 
 - name: copy username.exp
   copy: src={{item}}  dest=/root/{{item}}  mode=0644
