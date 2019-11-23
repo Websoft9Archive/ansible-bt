@@ -44,5 +44,6 @@
      language_ver: "{{language_ver[language_choose]}}"
 
   roles:  
+    - { role: common, tags: "common"}
     - { role: bt, tags: "bt"}
     - { role: end, tags: "end"}
