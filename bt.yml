@@ -26,6 +26,16 @@
       private: no
       default: 1
 
+    - name: 'init'
+      prompt: "Operating System initialization? \n \n
+      ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! \n
+      !! Warning ⚠ :Please select carefully, initialization will delete public key or user information !! \n
+      ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !  \n\n
+      1: Yes\n
+      2: No (default)\n"
+      private: no
+      default: 2 
+
   vars:
      language_ver:
       '1': 'zh'

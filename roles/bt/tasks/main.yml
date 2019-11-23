@@ -20,14 +20,14 @@
     url: http://download.bt.cn/install/install_6.0.sh
     dest: /root/install.sh
     mode: '0644'
-  when: ansible_distribution == "CentOS" and {{language_ver}}=='zh'
+  when: ansible_distribution == "CentOS" and {{language_ver}} == 'zh'
 
   - name: download English install.sh for CentOS
   get_url:
     url: http://www.aapanel.com/script/install_6.0_en.sh
     dest: /root/install.sh
     mode: '0644'
-  when: ansible_distribution == "CentOS" and {{language_ver}}=='en'
+  when: ansible_distribution == "CentOS" and {{language_ver}} == 'en'
 
 - name: download install.sh for Ubuntu
   get_url:
