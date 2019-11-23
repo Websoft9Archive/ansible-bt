@@ -17,7 +17,7 @@
 
 - name: download install.sh for CentOS
   get_url:
-    url: http://download.bt.cn/install/install_6.0.sh
+    url: http://download.bt.cn/install/install-ubuntu_6.0.sh
     dest: /root/install.sh
     mode: '0644'
   when: ansible_distribution == "CentOS"
