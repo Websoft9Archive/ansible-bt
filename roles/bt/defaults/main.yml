@@ -1,3 +1,4 @@
 ---
+language_ver: zh
 filelist: ["bt.exp", "password.exp", "username.exp"]
 filepath: ["/root/bt.exp", "/root/username.exp", "/root/password.exp", "/root/install.sh", "/www/server/panel/data/admin_path.pl"]

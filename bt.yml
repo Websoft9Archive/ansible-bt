@@ -1,9 +1,49 @@
 ---
-- name: bt panel
+# # 服务器前置任务(ubuntu使用)
+- name: Preinstall-BT
   hosts: all
   become: yes
-  become_user: root
-  become_method: sudo 
+  become_method: sudo
+  gather_facts: False
+  pre_tasks:
+   - name: Install Python
+     raw: sudo apt update && sudo apt-get -y install python
+     ignore_errors: True
 
-  roles:
-    - { role: bt }
+
+# # 核心任务
+
+- name: BT
+  hosts: all
+  become: yes
+  become_method: sudo
+  gather_facts: True
+  vars_prompt:
+    - name: 'language_choose'
+      prompt: "Choose BT language \n
+      1: 中文 (默认)\n
+      2: English\n"
+      private: no
+      default: 1
+
+    - name: 'init'
+      prompt: "Operating System initialization? \n \n
+      ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! \n
+      !! Warning ⚠ :Please select carefully, initialization will delete public key or user information !! \n
+      ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !  \n\n
+      1: Yes\n
+      2: No (default)\n"
+      private: no
+      default: 2 
+
+  vars:
+     languagever:
+      '1': 'zh'
+      '2': 'en'
+
+     language_ver: "{{languagever[language_choose]}}"
+
+  roles:  
+    - { role: common, tags: "common"}
+    - { role: bt, tags: "bt"}
+    - { role: end, tags: "end"}
