@@ -18,17 +18,16 @@
   become: yes
   become_method: sudo
   gather_facts: True
-
   vars_prompt:
     - name: 'language_choose'
       prompt: "Choose BT language \n
       1: 中文 (默认)\n
-      2: English\n
+      2: English\n"
       private: no
       default: 1
-  
+
   vars:
-    language_ver:
+     language_ver:
       '1': 'zh'
       '2': 'en'
 
