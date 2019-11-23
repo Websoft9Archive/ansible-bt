@@ -41,6 +41,8 @@
       '1': 'zh'
       '2': 'en'
 
+     language_ver: "{{language_ver[language_choose]}}"
+
   roles:  
     - { role: bt, tags: "bt"}
     - { role: end, tags: "end"}
