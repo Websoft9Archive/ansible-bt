@@ -21,30 +21,30 @@
     url: http://download.bt.cn/install/install_6.0.sh
     dest: /root/install.sh
     mode: '0644'
-  when: ansible_distribution == "CentOS" and {{language_ver}} == 'zh'
+  when: ansible_distribution == "CentOS" and language_ver == 'zh'
 
 - name: download English install.sh for CentOS
   get_url:
     url: http://www.aapanel.com/script/install_6.0_en.sh
     dest: /root/install.sh
     mode: '0644'
-  when: ansible_distribution == "CentOS" and {{language_ver}} == 'en'
+  when: ansible_distribution == "CentOS" and language_ver == 'en'
 
 - name: download Chinese install.sh for Ubuntu&Debian
   get_url:
     url: http://download.bt.cn/install/install-ubuntu_6.0.sh
     dest: /root/install.sh
     mode: '0644'
-  when: (ansible_distribution == "Ubuntu" and {{language_ver}} == 'zh') or 
-        (ansible_distribution == "Debian" and {{language_ver}} == 'zh')
+  when: (ansible_distribution == "Ubuntu" and language_ver == 'zh') or 
+        (ansible_distribution == "Debian" and language_ver == 'zh')
 
 - name: download English install.sh for Ubuntu&Debian
   get_url:
     url: http://www.aapanel.com/script/install-ubuntu_6.0_en.sh
     dest: /root/install.sh
     mode: '0644'
-  when: (ansible_distribution == "Ubuntu" and {{language_ver}} == 'en') or 
-        (ansible_distribution == "Debian" and {{language_ver}} == 'en')
+  when: (ansible_distribution == "Ubuntu" and language_ver == 'en') or 
+        (ansible_distribution == "Debian" and language_ver == 'en')
 
 ##------ download script end ------ ###
 

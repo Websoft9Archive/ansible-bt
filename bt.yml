@@ -37,11 +37,11 @@
       default: 2 
 
   vars:
-     language_ver:
+     languagever:
       '1': 'zh'
       '2': 'en'
 
-     language_ver: "{{language_ver[language_choose]}}"
+     language_ver: "{{languagever[language_choose]}}"
 
   roles:  
     - { role: common, tags: "common"}
