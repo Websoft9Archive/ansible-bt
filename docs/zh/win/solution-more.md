@@ -18,28 +18,22 @@ BT 域名绑定操作步骤：
 
 宝塔镜像默认安装都在系统盘，如果您购买了额外的数据盘，如何挂载呢？
 
-1. 参考云厂商的提供的数据盘挂载&格式化命令，完成挂载操作
-    CentOS下脚本挂载方案：https://www.bt.cn/bbs/thread-3187-1-1.html
-    CentOS下手工挂载方案：https://www.bt.cn/bbs/thread-5166-1-1.html
-2. 面板设置-默认建站目录，将www/wwwroot目录更改为数据盘对应的目录
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/btlinux-wwwrootset-websoft9.png)
+1. 将数据盘格式化
+2. 面板设置-默认建站目录，将C:\wwwroot目录更改为数据盘对应的目录
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-wwwroot-websoft9.png)
 
 注意：如果已有多个网站，建议先完成如下两个操作以不影响原网站：
 1. 先将wwwroot的数据备份下来
-2. 参考云厂商的提供的数据盘挂载&格式化命令，将数据盘挂载到wwwroot文件夹
-3. 将备份的数据库拷贝回wwwroot
-
-> 如果MySQL也需要转移到数据盘怎么办？现将www备份，然后将数据盘挂载到www，最后拷贝回所有数据
+2. 将原wwwroot中的文件拷贝到数据盘对应的目录
+3. 通过网站管理修改网站路径
 
 ## 安装PHP扩展
 
-当应用程序进行大版本升级的时候，可能会需要增加某种php扩展。
+打开宝塔面板->软件管理，找到PHP，点击设置，我们会看到“安装扩展项”
 
-1. 打开宝塔面板->软件管理->PHP，点击“设置”，进入“安装扩展项”安装所需的扩展
-   ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/btlinux-phpset-websoft9.png)
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-phpset-websoft9.png)
 
-2. 安装完成后，请点击“PHP服务”重启服务
-
+安装完成后，请点击“PHP服务”重启服务
 
 ## 设置HTTPS
 
@@ -52,20 +46,13 @@ BT 域名绑定操作步骤：
 
 ## 找回BT面板密码
 
-如果是忘记了密码，请使用WinSCP或Putty运行如下命令，重置密码
-~~~
+当忘记了宝塔Web端密码时，请远程桌面到Windows服务器，打开客户端->右上角菜单->修改密码 ，即可修改用户名和密码
 
-//示例：将admin用户的密码重置为admin123
-
-cd /www/server/panel && python tools.pyc panel admin123 admin
-
-//如果提示多次登录失败，暂时禁止登录 请输入以下命令，清除登录限制
-rm -f /www/server/panel/data/*.login
-
-~~~
-
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-resetpw-websoft9.png)
 
 ## 查看和管理日志文件
+
+日志文件是诊断故障和问题的重要手段，宝塔使用中可能会用到与日志相关的操作包括：
 
 ####  宝塔面板操作日志
 
@@ -75,8 +62,7 @@ rm -f /www/server/panel/data/*.login
 
 #### Web日志、网站日志
 
-通过宝塔在线文件管理，进入：/www/wwwlogs 目录，管理Web日志、网站日志
-
+通过宝塔在线文件管理，进入：C:\BtSoft\WebSoft\apache\logs 目录，管理Web日志、网站日志
 
 ## 管理数据库
 

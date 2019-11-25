@@ -11,9 +11,7 @@ BT 完整的更新升级包括：系统级更新（操作系统和运行环境�
 
 ## 系统级更新
 
-### Linux 系统
-
-针对 Linux 系统，使用 SSH 登录后，运行一条更新命令，即可完成系统级更新：
+运行一条更新命令，即可完成系统级更新：
 
 ``` shell
 #For Ubuntu&Debian
@@ -24,21 +22,23 @@ yum update -y
 ```
 > 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的Cron
 
-### Window 系统
+## BT 更新
 
-Windows服务器的更新与本地电脑类似，手动找到更新管理程序，设置自动下载自动更新即可。
+如果要更新 BT 的次要版本（例如，从 4.0.1 升级至 4.0.3），是非常容易的：
 
+```
+## 更新 BT 所有组件
+sudo apt install --only-upgrade 'zabbix.*'
 
-## 宝塔升级
+## 更新 BT server
+sudo apt install --only-upgrade 'zabbix-server.*'
 
-### 宝塔内核升级
+## 更新 BT agent 
+sudo apt install --only-upgrade 'zabbix-agent.*'
+```
 
-宝塔提供了一键在线升级功能，只要根据系统提示，点击升级按钮即可完成升级
+## BT 升级
 
-### 环境组件升级
+BT 升级是指从低版本升到高版本，例如 3.0 to 4.0
 
-宝塔在使用中一般会安装大量的软件或组件，包括：php，mysql，phpmyadmin等，
-
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-win-intallhj-websoft9.png)
-
-升级请参考官方教程《[宝塔-软件管理](http://docs.bt.cn/424281)》
+与升级有关的详细方案，请参考官方文档：[BT 升级步骤](https://www.zabbix.com/documentation/4.0/zh/manual/installation/upgrade)

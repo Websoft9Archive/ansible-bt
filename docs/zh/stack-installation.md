@@ -1,58 +1,48 @@
 # 初始化安装
 
-在云服务器上部署 BT 预装包之后，请参考下面的步骤快速入门。
+在云服务器上部署 BT（Linux） 预装包之后，请参考下面的步骤快速入门。
 
 ## 准备
 
 1. 在云控制台获取您的 **服务器公网IP地址** 
-2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:80** 端口是否开启
+2. 在云控制台安全组中，检查 **Inbound（入）规则** 下的 **TCP:8888** 端口是否开启
 3. 若想用域名访问 BT，请先到 **域名控制台** 完成一个域名解析
 
-## BT 安装向导
+## 网站环境安装
 
-1. 使用本地电脑的 Chrome 或 Firefox 浏览器访问网址：*http://域名/zabbix* 或 *http://服务器公网IP//zabbix*, 就进入引导首页
-   ![开始安装 BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installwel-websoft9.png)
+BT 部署到你的服务器后，使用浏览器访问：*http://服务器公网IP:8888* ，即可进入 BT 面板后台  
 
-   **如果默认打开就是登陆界面**，请直接查看（[默认账号](/zh/stack-accounts.html#zabbix)） 后登录使用
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-login-websoft9.png)
+镜像中只安装了干净的面板工具，需要自行安装所需的环境：
 
-2. 检测环境是否满足安装要求
-   ![安装 BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installcheck-websoft9.png)
+### 安装PHP
 
-3. 安装进入数据库配置界面（[不知道数据库密码？](/zh/stack-accounts.html#mysql)），然后进入下一步
-   ![安装 BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installdb-websoft9.png)
+登录面板工具后，系统默认提醒用户选择一种PHP集成包（LNMP/LAMP）进行安装，
 
-4. BT Server 设置（保持默认设置即可）
-   ![安装 BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installserver-websoft9.png)
+1. 其中的每个组件版本可选（如下图LAMP主流版本选择）：
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt02.png)
 
-5. 安装前信息确认  
-   ![安装 BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installsy-websoft9.png)
+2. 参完成选择后，点击“一键安装”，待安装完成后您就可以配置自己的网站了。
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt03.png) 
 
-6. 安装完成提示信息  
-   ![安装 BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installss-websoft9.png)
 
-7. 登录 BT 后台（[默认账号](/zh/stack-accounts.html#zabbix)）  
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-login-websoft9.png)
+### 安装更多软件
 
-8. 登录成功，体验后台
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboard-websoft9.png)
+初始化安装之外的安装，都可以通过【软件管理】去安装更多的组件。
 
-9. 进入用户管理界面，更换所需的语言（如果语言为灰色状态，参考[启用语言方案](/zh/solution-more.md#zabbix-多语言)）
-   ![BT 更换语言](https://libs.websoft9.com/Websoft9/DocsPicture/en/zabbix/zabbix-changelang-websoft9.png)  
-   ![BT 更换语言](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboardzh-websoft9.png)
+#### 安装Tomcat
 
-> 需要了解更多 BT 的使用，请参考官方文档：[BT Documentation](https://www.zabbix.com/documentation/current/)
+宝塔面板下的【软件管理】>【Tomcat】，点击【安装】即可
+
+#### 安装Node.js
+
+宝塔面板下的【软件管理】>【PM2】，点击【安装】即可
 
 ## 常见问题
 
 #### 浏览器无法访问 BT（白屏没有结果）？
 
-您的服务器对应的安全组80端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
+您的服务器对应的安全组 8888 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
 
-#### 本部署包采用的哪个数据库来存储 BT 数据？
+#### 能否将 PHP, Java 和 Node.js 安装到一起？
 
-MariaDB（ MySQL 分支）
-
-#### 是否可以采用云厂商提供的 RDS 来存储 BT 数据？
-
-不建议
+可以，但不建议。虽然宝塔的功能强大，能够安装的组件足够多，但是请把握一个原则，能不装的不要装，现在用不到的不要装

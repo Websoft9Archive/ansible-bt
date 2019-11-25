@@ -2,37 +2,23 @@
 
 BT 预装包包含 BT 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
 
-> 本自动化部署方案默认安装：BT-Server, BT-Agent, BT-Web 三大组件。
-
 ## 路径
 
-### BT
+### Linux 版
 
-BT 安装目录: */usr/share/zabbix*  
-BT 配置文件: */usr/share/zabbix/conf/zabbix.conf.php*    
-BT-Agent 日志文件：*/var/log/zabbix/zabbix_agentd.log*     
-BT-Server 日志文件：*/var/log/zabbix/zabbix_server.log*  
+*   安装目录：/www/server
+*   访问方式：Web面板
+*   网站目录：/www/wwwroot/default
+*   MySQL目录：/www/server/mysql
+*   日志目录：/www/wwwlogs
 
-> BT 配置文件中包含数据库连接信息，更改了 MySQL 数据库账号密码，此处也需要对应修改
+### Windows 版
 
-### PHP
-
-PHP 配置文件： */etc/php/7.2/apache2/php.ini*  
-PHP Modules 配置文件目录： */etc/php/7.2/mods-available*
-
-### Apache
-
-Apache 虚拟主机配置文件：*/etc/apache2/sites-available/000-default.conf*  
-Apache 主配置文件：*/etc/apache2/apache2.conf*  
-Apache 日志文件：*/var/log/apache2*  
-Apache 模块配置目录： */etc/apache2/mods-available*
-
-### MariaDB
-
-MariaDB 安装路径：*/usr/share/mysql*    
-MariaDB 数据文件：*/var/lib/mysql*  
-MariaDB 配置文件：*/etc/mysql/mariadb.conf.d/50-server.cnf*
-
+*   安装目录：C:\BtSoft\ServerAdmin
+*   访问方式：客户端和Web面板均可
+*   网站目录：C:\wwwroot
+*   MySQL目录：C:\BtSoft\WebSoft\mysql
+*   日志文件：C:\BtSoft\WebSoft\apache\logs
 
 ## 端口号
 
@@ -42,9 +28,11 @@ MariaDB 配置文件：*/etc/mysql/mariadb.conf.d/50-server.cnf*
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| HTTP | 80 | 通过 HTTP 访问 BT | 必须 |
-| HTTPS | 443 | 通过 HTTPS 访问 BT | 可选 |
-| MySQL | 3306 | 远程连接 MariaDB | 可选 |
+| HTTP | 80 | 通过 HTTP 访问你的网站 | 必须 |
+| HTTPS | 443 | 通过 HTTPS 访问你的网站 | 可选 |
+| BT| 8888 | 访问 宝塔 Linux 版的管理界面 | 必须 |
+| BT | 888 | 访问 宝塔 Windows 版的管理界面 | 必须 |
+| MySQL | 3306 | 远程连接 MySQL | 可选 |
 
 ## 版本号
 
