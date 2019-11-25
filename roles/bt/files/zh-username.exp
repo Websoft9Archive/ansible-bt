@@ -9,3 +9,4 @@ expect "请输入新的面板用户名"
 send "administrator\r"
 
 interact
+expect eof

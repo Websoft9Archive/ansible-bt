@@ -9,3 +9,4 @@ expect "new username"
 send "administrator\r"
 
 interact
+expect eof
