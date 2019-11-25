@@ -11,10 +11,6 @@
     state: latest
   when: ansible_distribution == "Ubuntu" or ansible_distribution == "Debian"
 
-- name: install python-pexpect
-  pip:
-    name: pexpect
-
 ##------ download script start ------ ###
 - name: download Chinese install.sh for CentOS
   get_url:
@@ -61,7 +57,10 @@
   with_items: "{{filelist}}"
   when: language_ver == 'zh'
 
-- name: install bt & change username & password, waiting for 5-10 mins
+- name: install bt, waiting for 5-10 mins
+  command: expect /root/bt.exp
+
+- name: change username & password
   command: expect /root/{{item}}
   with_items: "{{filelist}}"
 
