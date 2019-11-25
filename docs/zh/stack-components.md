@@ -36,27 +36,4 @@ BT 预装包包含 BT 运行所需一序列支撑软件（简称为“组件”�
 
 ## 版本号
 
-组件版本号可以通过云市场商品页面查看。但部署到您的服务器之后，组件会自动进行更新导致版本号有一定的变化，故精准的版本号请通过在服务器上运行命令查看：
-
-```shell
-# Linux Version
-lsb_release -a
-
-# PHP Version
-php -v
-
-# List Installed PHP Modules
-php -m
-
-# Apache version on Ubuntu
-apache2 -v
-
-# Apache version on Centos
-httpd -v
-
-# List Installed Apache Modules
-apachectl -M
-
-# MySQL version:
-mysql -V
-```
+组件版本号可以宝塔控制台查看

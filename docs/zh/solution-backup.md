@@ -54,7 +54,13 @@ sidebarDepth: 3
 ```
 通用的手动备份操作步骤如下：
 
-1. 通过 WinSCP 将网站目录（*/etc/zabbix*）**压缩后**再完整的下载到本地
+1. 通过 WinSCP 将网站目录**压缩后**再完整的下载到本地
 2. 导出 BT 数据库
 3. 将程序文件、数据文件和数据库文件放到同一个文件夹，根据日期命名
 4. 备份工作完成
+
+###  BT自动备份
+
+宝塔提供的计划任务功能，可以实现自动网站的自动备份
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-taskbackup-websoft9.png)

@@ -46,47 +46,24 @@
 
 宝塔官方并没有关于网站数量上限的说明。但从实际运维经验来看，建议一台使用宝塔的云服务器上最好不要超过20个网站。
 
-#### 是否可以使用云平台的 RDS 作为 BT 的数据库？
-
-不建议使用非服务器上的第三方数据库
-
-#### BT-Server 能在Windows服务器上部署吗？
-
-官方没有提供 Windows 上的安装方案
-
-#### BT数据库连接配置信息在哪里？
-
-数据库配置信息 [BT 配置文件](/zh/stack-components.html#zabbix)中
 
 #### 如果没有域名是否可以部署 BT？
 
-可以，访问`http://服务器公网IP/zabbix` 即可
-
-#### 数据库 root 用户对应的密码是多少？
-
-密码存放在服务器相关文件中：`/credentials/password.txt`
+可以
 
 #### 是否有可视化的数据库管理工具？
 
-从安全角度考虑，本部署包中没有预装 phpMyAdmin
+宝塔安装 LAMP 或 LNMP 的时候默认安装 phpMyAdmin
 
 #### 是否可以修改 BT 的源码路径？
 
-不建议修改
+不可以
 
 #### 如何修改上传的文件所属用户（组）和读写权限?
 
-```shell
-#例如：用户为 apache
-chown -R apache.apache /data/wwwroot
+通过宝塔后台的文件管理修改权限  
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-quanxian-websoft9.png)
 
-#例如：用户为 nginx
-chown -R nginx.nginx /data/wwwroot
-
-#修改读写执行权限
-find /data/wwwroot -type d -exec chmod 750 {} \;
-find /data/wwwroot -type f -exec chmod 640 {} \;
-```
 #### 部署和安装有什么区别？
 
 部署是将一序列软件按照不同顺序，先后安装并配置到服务器的过程，是一个复杂的系统工程。  

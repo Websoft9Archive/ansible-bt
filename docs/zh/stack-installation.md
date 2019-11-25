@@ -12,11 +12,15 @@
 
 BT 部署到你的服务器后，使用浏览器访问：*http://服务器公网IP:8888* ，即可进入 BT 面板后台  
 
-镜像中只安装了干净的面板工具，需要自行安装所需的环境：
+### 升级
+
+首先检查升级，保证系统为最新状态  
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-update001-websoft9.png)
 
 ### 安装PHP
 
-登录面板工具后，系统默认提醒用户选择一种PHP集成包（LNMP/LAMP）进行安装，
+升级后，根据默认提醒，选择一种PHP集成包（LNMP/LAMP）进行安装：
 
 1. 其中的每个组件版本可选（如下图LAMP主流版本选择）：
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt02.png)

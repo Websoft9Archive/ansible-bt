@@ -17,6 +17,7 @@ module.exports = [
     children: [
       '/zh/stack-installation',
       '/zh/solution-installapps',
+      '/zh/solution-ftp',
       '/zh/solution-more',
     ]
   },
@@ -27,6 +28,7 @@ module.exports = [
     children: [
       '/zh/win/stack-installation',
       '/zh/win/solution-installapps',
+      '/zh/win/solution-ftp',
       '/zh/win/solution-more',
     ]
   },

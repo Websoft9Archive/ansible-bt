@@ -35,10 +35,12 @@ Windows服务器的更新与本地电脑类似，手动找到更新管理程序�
 
 宝塔提供了一键在线升级功能，只要根据系统提示，点击升级按钮即可完成升级
 
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-update001-websoft9.png)
+
 ### 环境组件升级
 
 宝塔在使用中一般会安装大量的软件或组件，包括：php，mysql，phpmyadmin等，
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-win-intallhj-websoft9.png)
 
-升级请参考官方教程《[宝塔-软件管理](http://docs.bt.cn/424281)》
+升级请参考官方教程《[宝塔-软件管理](https://www.kancloud.cn/chudong/bt2017/424281)》

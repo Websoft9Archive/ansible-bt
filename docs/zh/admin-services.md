@@ -2,23 +2,12 @@
 
 使用由Websoft9提供的 BT 部署方案，可能需要用到的服务如下：
 
-### BT-Server
+### BT 启停
 
-```shell
-systemctl start zabbix-server
-systemctl restart zabbix-server
-systemctl stop zabbix-server
-systemctl status zabbix-server
-```
+通过控制台，启动和关闭 BT 面板  
 
-### BT-Agent
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-disablebt-websoft9.png)
 
-```shell
-systemctl start zabbix-agent
-systemctl restart zabbix-agent
-systemctl stop zabbix-agent
-systemctl status zabbix-agent
-```
 
 ### Apache
 
@@ -36,7 +25,26 @@ sudo systemctl restart httpd
 sudo systemctl status httpd
 ```
 
-### MariaDB
+
+### Nginx
+
+```shell
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo systemctl status nginx
+```
+
+### PHP-FPM
+
+```shell
+systemctl start php-fpm
+systemctl stop php-fpm
+systemctl restart php-fpm
+systemctl status php-fpm
+```
+
+### MySQL&MariaDB
 
 ```shell
 sudo systemctl start mysql
