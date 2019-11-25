@@ -1,4 +1,5 @@
 ---
 language_ver: zh
-filelist: ["bt.exp", "password.exp", "username.exp"]
-filepath: ["/root/bt.exp", "/root/username.exp", "/root/password.exp", "/root/install.sh", "/www/server/panel/data/admin_path.pl"]
+
+#修改账号密码，用户名不得少于5个字符
+filelist: ["password.exp", "username.exp"]

@@ -48,11 +48,20 @@
 
 ##------ download script end ------ ###
 
-- name: copy username.exp
-  copy: src={{item}}  dest=/root/{{item}}  mode=0644
-  with_items: "{{filelist}}"
+- name: copy bt install script
+  copy: src=bt.exp  dest=/root/bt.exp  mode=0644
 
-- name: install bt & change username & password
+- name: copy change username & password script for English
+  copy: src=en-{{item}}  dest=/root/{{item}}  mode=0644
+  with_items: "{{filelist}}"
+  when: language_ver == 'en'
+
+- name: copy change username & password script for Chinese
+  copy: src=zh-{{item}}  dest=/root/{{item}}  mode=0644
+  with_items: "{{filelist}}"
+  when: language_ver == 'zh'
+
+- name: install bt & change username & password, waiting for 5-10 mins
   command: expect /root/{{item}}
   with_items: "{{filelist}}"
 

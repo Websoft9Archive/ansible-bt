@@ -21,7 +21,7 @@
   vars_prompt:
     - name: 'language_choose'
       prompt: "Choose BT language \n
-      1: 中文 (默认)\n
+      1: Chinese (default)\n
       2: English\n"
       private: no
       default: 1
