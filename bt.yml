@@ -44,6 +44,6 @@
      language_ver: "{{languagever[language_choose]}}"
 
   roles:  
-    - { role: common, tags: "common"}
+    - { role: cloud, tags: "cloud"}
     - { role: bt, tags: "bt"}
     - { role: end, tags: "end"}
