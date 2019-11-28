@@ -13,8 +13,8 @@ head: [
 locales: {
     '/': {
       lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-      title: 'BT Administrator Guide',
-      description: 'You can get the Installation of Image,Administrator,Configuration of the BT from this documentation.'
+      title: 'aaPanel Administrator Guide',
+      description: 'You can get the Installation of Image,Administrator,Configuration of the aaPanel from this documentation.'
     },
     '/zh/': {
       lang: 'zh-CN',

@@ -1,50 +1,33 @@
 # FAQ
 
-#### BT support multi-language?
+#### aaPanel support multi-language?
 
-Yes
+aaPanel have two edition: English and Chinese, your can only install one edition every time
 
 #### What is the default character set?
 
 UTF-8
 
-#### Is BT-Proxy included in this deployment solution?
+#### Can I use the RDS of Cloud Provider for application on aaPanel?
 
-No, BT proxy is a process that may collect monitoring data from one or more monitored devices and send the information to the BT server, deploying a proxy is optional, but may be very beneficial to distribute the load of a single BT server. If only proxies collect data, processing on the server becomes less CPU and disk I/O hungry.
+Yes
 
-#### What's BT-Sender?
+#### Where is the database connection configuration of aaPanel?
 
-BT sender is a command line utility that may be used to send performance data to BT server for processing.
+Database configuration information in *LocalSettings.php* in the [aaPanel installation directory](/stack-components.md#mysql)
 
-#### What's BT-Git?
+#### If there is no domain name, can I deploy aaPanel?
 
-BT get is a command line utility which can be used to communicate with BT agent and retrieve required information from the agent.
-
-
-#### Can I use the RDS of Cloud Provider for BT?
-
-No
-
-#### Where is the database connection configuration of BT?
-
-Database configuration information in *LocalSettings.php* in the [BT installation directory](/stack-components.md#zabbix)
-
-#### If there is no domain name, can I deploy BT?
-
-Yes, visit BT by *http://Internet IP*
-
-#### What is the password for the database root user?
-
-The password is stored in the server related file: `/credentials/password.txt`
+Yes, visit aaPanel by *http://Internet IP:8888*
 
 
-#### Is it possible to modify the source path of BT?
+#### Is it possible to modify the source path of aaPanel?
 
 No
 
-#### Can I configure this BT if I don't understand the Linux command?
+#### Can I configure this aaPanel if I don't understand the Linux command?
 
-Yes, you can use GUI tool WinSCP to start BT, no commands
+Yes, you can use GUI of aaPanel, no commands
 
 #### How to change the permissions of filesytem?
 

@@ -1,24 +1,17 @@
 # Start or Stop the Services
 
-These commands you must know when you using the BT of Websoft9
+These commands you must know when you using the aaPanel of Websoft9
 
-### BT-Server
-
+### aaPanel
 ```shell
-systemctl start zabbix-server
-systemctl restart zabbix-server
-systemctl stop zabbix-server
-systemctl status zabbix-server
+sudo service bt start
+sudo service bt stop
+sudo service bt restart
+
+## uninstall aaPanel
+service bt stop && chkconfig --del bt && rm -f /etc/init.d/bt && rm -rf /www/server/panel
 ```
 
-### BT-Agent
-
-```shell
-systemctl start zabbix-agent
-systemctl restart zabbix-agent
-systemctl stop zabbix-agent
-systemctl status zabbix-agent
-```
 
 ### Apache
 
@@ -36,7 +29,26 @@ sudo systemctl restart httpd
 sudo systemctl status httpd
 ```
 
-### MariaDB
+
+### Nginx
+
+```shell
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo systemctl status nginx
+```
+
+### PHP-FPM
+
+```shell
+systemctl start php-fpm
+systemctl stop php-fpm
+systemctl restart php-fpm
+systemctl status php-fpm
+```
+
+### MySQL&MariaDB
 
 ```shell
 sudo systemctl start mysql

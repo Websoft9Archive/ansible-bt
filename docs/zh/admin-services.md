@@ -8,6 +8,17 @@
 
 ![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-disablebt-websoft9.png)
 
+或运行命令
+
+```shell
+sudo service bt start
+sudo service bt stop
+sudo service bt restart
+
+## 删除（慎用）
+service bt stop && chkconfig --del bt && rm -f /etc/init.d/bt && rm -rf /www/server/panel
+```
+
 
 ### Apache
 

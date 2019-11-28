@@ -49,7 +49,13 @@ Manual backup for application is based on the **Exporting source code and databa
 ```
 The general manual backup operation steps are as follows:
 
-1. Compress and download the entire */etc/zabbix* directory by SFTP 
-2. Export BT's database
+1. Compress and download the entire */www/server* directory by SFTP 
+2. Export aaPanel's database
 3. Put the source code file, data file and database file in the same folder, named according to the date
 4. Backup completed
+
+### aaPanel automatic backup
+
+宝塔提供的计划任务功能，可以实现自动网站的自动备份
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-backup-websoft9.png)

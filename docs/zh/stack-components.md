@@ -6,19 +6,26 @@ BT 预装包包含 BT 运行所需一序列支撑软件（简称为“组件”�
 
 ### Linux 版
 
-*   安装目录：/www/server
-*   访问方式：Web面板
-*   网站目录：/www/wwwroot/default
-*   MySQL目录：/www/server/mysql
-*   日志目录：/www/wwwlogs
+*   安装目录：*/www/server*
+*   网站目录：*/www/wwwroot/default*
+*   Apache目录：*/www/server/httpd*
+*   Nginx目录：*/www/server/nginx*
+*   MySQL目录：*/www/server/mysql*
+*   PHP目录：*/www/server/php*
+*   Redis目录：*/www/server/redis*
+*   Memcached目录：/usr/local/memcached*
+*   日志目录：*/www/wwwlogs*
+
+访问方式：Web面板
 
 ### Windows 版
 
-*   安装目录：C:\BtSoft\ServerAdmin
-*   访问方式：客户端和Web面板均可
-*   网站目录：C:\wwwroot
-*   MySQL目录：C:\BtSoft\WebSoft\mysql
-*   日志文件：C:\BtSoft\WebSoft\apache\logs
+*   安装目录：*C:\BtSoft\ServerAdmin*
+*   网站目录：*C:\wwwroot*
+*   MySQL目录：*C:\BtSoft\WebSoft\mysql*
+*   日志文件：*C:\BtSoft\WebSoft\apache\logs*
+
+访问方式：Web面板 或 服务器客户端
 
 ## 端口号
 

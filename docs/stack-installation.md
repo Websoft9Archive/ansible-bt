@@ -1,60 +1,50 @@
 # Initial Installation
 
-If you have completed the BT deployment on Cloud Platform, the following steps is for you to start use it quikly
+If you have completed the aaPanel deployment on Cloud Platform, the following steps is for you to start use it quikly
 
 ## Preparation
 
 1. Get the **Internet IP** on your Cloud Platform
-2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the TCP:80 is allowed
-3. Make a domain resolution on your DNS Console if you want to use domain for BT
+2. Check you **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)** of Cloud Console to ensure the TCP:8888 is allowed
+3. Make a domain resolution on your DNS Console if you want to use domain for aaPanel
 
-## BT Installation Wizard
+## aaPanel environment setup
 
-1. Using local Chrome or Firefox to visit the URL *https://domain/zabbix* or *https://Internet IP/zabbix*, start to install your BT
-  ![](http://libs.websoft9.com/Websoft9/DocsPicture/en/zabbix/mw05.png)
+Using local Chrome or Firefox to visit the URL *http://Internet IP:8888*, go to the login page of aaPanel
 
-   ![install BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installwel-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-login-websoft9.png)
 
-   **If you can visit login page directly**, please get the Username and Password from [here](/stack-accounts.html#zabbix)
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-login-websoft9.png)
+### Upgrade
 
-2. Check the environment for installation
-   ![install BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installcheck-websoft9.png)
+First, you should upgrade aaPanel to latest version  
 
-3. Configure the database connection([Don't know password?](/stack-accounts.md#mysql)) and go next step
-   ![install BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installdb-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-update001-websoft9.png)
 
-4. BT Server settings, suggest using default settings
-   ![install BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installserver-websoft9.png)
+### Setup PHP runtime
 
-5. Pre-Installation summary  
-   ![install BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installsy-websoft9.png)
+Start to setup LAMP or LNMP according the aaPanel's remainder
 
-6. Installation successful    
-   ![install BT](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-installss-websoft9.png)
+1. 其中的每个组件版本可选（如下图LAMP主流版本选择）：
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-installlamp-websoft9.png)
 
-7. Login to BT console([default username and password](/stack-accounts.md#zabbix))
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-login-websoft9.png)
+2. 参完成选择后，点击“一键安装”，待安装完成后您就可以配置自己的网站了。
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-installlamping-websoft9.png) 
 
-8. BT dashboard
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboard-websoft9.png)
 
-9. Go to the User profile of BT Administrator, change your language(if your lanuage is gray, refer to [here](/solution-more.md#zabbix-language) to set it)
-   ![BT change language](https://libs.websoft9.com/Websoft9/DocsPicture/en/zabbix/zabbix-changelang-websoft9.png)
-   ![BT change language](https://libs.websoft9.com/Websoft9/DocsPicture/zh/zabbix/zabbix-dashboardzh-websoft9.png)
+### Setup more
 
-> More useful BT guide, please refer to [BT Documentation](https://www.zabbix.com/documentation/current)
+初始化安装之外的安装，都可以通过【软件管理】去安装更多的组件。
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/bt/bt-appstore-websoft9.png)
+
+> More useful aaPanel guide, please refer to [aaPanel forum](https://forum.aapanel.com/)
 
 ## Q&A
 
-#### I can't visit the start page of BT?
+#### I can't visit the start page of aaPanel?
 
-Your TCP:80 of Security Group Rules is not allowed so there no response from Chrome or Firefox
+Your TCP:8888 of Security Group Rules is not allowed so there no response from Chrome or Firefox
 
-#### Which database does this BT package use?
+#### 能否将 PHP, Java 和 Node.js 安装到一起？
 
-MariaDB
-
-#### Can I use Cloud database for BT?
-
-No
+可以，但不建议。虽然宝塔的功能强大，能够安装的组件足够多，但是请把握一个原则，能不装的不要装，现在用不到的不要装

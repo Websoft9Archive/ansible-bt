@@ -1,6 +1,6 @@
 # Troubleshooting
 
-We collect the most common troubleshooting of using BT for your reference:
+We collect the most common troubleshooting of using aaPanel for your reference:
 
 > Many troubleshooting is closely related to the Server, if you can confirm troubleshooting is related to Cloud Platform, please refer to [Cloud Platform Documentation](https://support.websoft9.com/docs/faq/tech-instance.html)
 

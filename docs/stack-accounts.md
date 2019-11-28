@@ -1,25 +1,15 @@
 # Username and Password
 
-These accounts are required for BT image installation and configuration
+These accounts are required for aaPanel image installation and configuration
 
-## BT
+## aaPanel
 
-Following is the default Administrator account of BT: 
+Following is the default Administrator account of aaPanel: 
 
-Administrator username: `Admin`  
-Administrator password: `zabbix`  
+Administrator username: `administrator`  
+Administrator password: `admin123`  
 
-BT log in URL: *http://Internet IP/zabbix*
-
-## MariaDB
-
-* Administrator username: *`root`*
-* Administrator password: stored in the file of your server instance: */credentials/password.txt*. 
-   ![Run the cat command](https://libs.websoft9.com/Websoft9/DocsPicture/zh/common/catdbpassword-websoft9.png)
-
-   You use the **online SSH interface on Cloud Console** and run `cat /credentials/password.txt` command to get the database password
-
-> If you want to log in MySQL, refer to [MySQL Web interface Management](/admin-mysql.md)
+aaPanel log in URL: *http://Internet IP:8888*
 
 ## Linux
 

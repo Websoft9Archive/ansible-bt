@@ -1,37 +1,45 @@
 # Parameters
 
-The BT deployment package contains a sequence software (referred to as "components") required for BT to run. The important information such as the component name, installation directory path, configuration file path, port, version, etc. are listed below.
-
-> BT-Server, BT-Agent, BT-Web have included for this deployment solution
+The aaPanel deployment package contains a sequence software (referred to as "components") required for aaPanel to run. The important information such as the component name, installation directory path, configuration file path, port, version, etc. are listed below.
 
 ## Path
 
-### BT
+### aaPanel
 
-BT installation directory: */usr/share/zabbix*  
-BT configuration file: */usr/share/zabbix/conf/zabbix.conf.php*    
-BT-Agent logs file：*/var/log/zabbix/zabbix_agentd.log*     
-BT-Server logs file：*/var/log/zabbix/zabbix_server.log*  
-
-> BT configuration file includes the database connection information
+aaPanel installation directory: */www/server*  
+aaPanel site default directory: */www/wwwroot*    
+aaPanel logs file：*tmp/panelBoot*     
+aaPanel site logs file：*/www/wwwlogs*  
 
 ### PHP
 
-PHP configuration file: */etc/php/7.2/apache2/php.ini*  
-PHP Modules configurations directory: */etc/php/7.2/mods-available*
+PHP configuration file: */www/server/php/{52|53|54|55|56|70|71}/etc/php.ini*  
+PHP installation directory: */www/server/php*
 
 ### Apache
 
-Apache vhost configuration file：*/etc/apache2/sites-available/000-default.conf*  
-Apache main configuration file：*/etc/apache2/apache2.conf*  
-Apache logs file：*/var/log/apache2*  
-Apache Apache module configuration directory： */etc/apache2/mods-available*
+Apache vhost configuration file：*/www/server/panel/vhost/apache*  
+Apache main configuration file：*/www/server/apache/conf/httpd.conf*  
 
-### MariaDB
+### Nginx
 
-MySQL installation directory: */usr/local/mysql*  
-MySQL data directory: */var/lib/mysql*  
-MySQL configuration file: */etc/mysql/mariadb.conf.d/50-server.cnf*    
+Nginx vhost configuration file：*/www/server/panel/vhost/nginx*  
+Nginx main configuration file：*/www/server/nginx/conf/nginx.conf*  
+
+### MySQL
+
+MySQL installation directory: */www/server/mysql*  
+MySQL data directory: */www/server/data*  
+MySQL configuration file: */etc/my.cnf*    
+phpmyadmin installation directory: */www/server/phpmyadmin*   
+
+## Resis
+
+Redis installation directory: */www/server/redis*
+
+## Memcached
+
+Memcached installation directory */www/server//usr/local/memcached*
 
 ## Ports
 
@@ -41,13 +49,13 @@ These ports should be opened for this application:
 
 | Name | Number | Use |  Necessity |
 | --- | --- | --- | --- |
-| MariaDB | 3306 | Remote connect MariaDB | Optional |
-| HTTP | 80 | HTTP requests for BT | Required |
-| HTTPS | 443 | HTTPS requests BT | Optional |
+| MySQL | 3306 | Remote connect MySQL | Optional |
+| HTTP | 80 | HTTP requests for aaPanel | Required |
+| HTTPS | 443 | HTTPS requests aaPanel | Optional |
 
 ## Version
 
-You can see the version from product page of Marketplace. However, after being deployed to your server, the components will be automatically updated, resulting in a certain change in the version number. Therefore, the exact version number should be viewed by running the command on the server:
+You can see the version from aaPanel or running these commands
 
 ```shell
 # Linux Version
