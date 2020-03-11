@@ -3,3 +3,11 @@ language_ver: zh
 
 #修改账号密码，用户名不得少于5个字符
 filelist: ["password.exp", "username.exp"]
+
+bt_download_url:
+  RedHat:
+    zh: http://download.bt.cn/install/install_6.0.sh
+    en: http://download.bt.cn/install/install_6.0_en.sh 
+  Debian:
+    zh: http://download.bt.cn/install/install-ubuntu_6.0.sh
+    en: http://download.bt.cn/install/install-ubuntu_6.0_en.sh

@@ -1,0 +1,39 @@
+---
+# # 服务器前置任务(ubuntu使用)
+- name: Preinstall-BT
+  hosts: all
+  become: yes
+  become_method: sudo
+  gather_facts: False
+  pre_tasks:
+   - name: Install Python
+     raw: sudo apt update && sudo apt-get -y install python
+     ignore_errors: True
+
+
+# # 核心任务
+
+- name: BT
+  hosts: all
+  become: yes
+  become_method: sudo
+  gather_facts: True
+  vars_prompt:
+    - name: 'language_choose'
+      prompt: "Choose BT language \n
+      1: Chinese (default)\n
+      2: English\n"
+      private: no
+      default: 1
+
+  vars:
+     languagever:
+      '1': 'zh'
+      '2': 'en'
+
+     language_ver: "{{languagever[language_choose]}}"
+
+  roles:  
+    - { role: cloud, tags: "cloud"}
+    - { role: bt, tags: "bt"}
+    - { role: end, tags: "end"}
