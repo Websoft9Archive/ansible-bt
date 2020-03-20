@@ -1,2 +1,2 @@
-common_install_PyPackages: False
+common_install_python_modules: False
 common_install_components: False
