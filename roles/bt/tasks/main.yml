@@ -17,14 +17,14 @@
     url: "{{bt_download_url[ansible_os_family].zh}}"
     dest: /root/install.sh
     mode: '0644'
-  when: language_ver == 'zh'
+  when: bt_language == 'zh'
 
 - name: download English install.sh for {{ansible_os_family}}
   get_url:
     url: "{{bt_download_url[ansible_os_family].en}}"
     dest: /root/install.sh
     mode: '0644'
-  when: language_ver == 'en'
+  when: bt_language == 'en'
 
 ##------ download script end ------ ###
 
@@ -33,20 +33,20 @@
 
 - name: copy change username & password script for English
   copy: src=en-{{item}}  dest=/root/{{item}}  mode=0644
-  with_items: "{{filelist}}"
-  when: language_ver == 'en'
+  with_items: "{{bt_filelist}}"
+  when: bt_language == 'en'
 
 - name: copy change username & password script for Chinese
   copy: src=zh-{{item}}  dest=/root/{{item}}  mode=0644
-  with_items: "{{filelist}}"
-  when: language_ver == 'zh'
+  with_items: "{{bt_filelist}}"
+  when: bt_language == 'zh'
 
 - name: install bt, waiting for 5-10 mins
   command: expect /root/bt.exp
 
 - name: change username & password
   command: expect /root/{{item}}
-  with_items: "{{filelist}}"
+  with_items: "{{bt_filelist}}"
 
 - name: remove extra files 
   shell: rm -f item /root/*

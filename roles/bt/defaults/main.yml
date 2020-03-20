@@ -1,8 +1,8 @@
 ---
-language_ver: zh
+bt_language: zh
 
 #修改账号密码，用户名不得少于5个字符
-filelist: ["password.exp", "username.exp"]
+bt_filelist: ["password.exp", "username.exp"]
 
 bt_download_url:
   RedHat:

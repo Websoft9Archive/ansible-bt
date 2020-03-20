@@ -26,6 +26,18 @@
 
 本项目是下载[BT官方脚本](https://www.bt.cn/download/linux.html)安装。 
 
+如需安装最新版本，请修改 bt role的变量文件 [main.yml](/roles/bt/defaults/main.yml) 中相关的下载地址
+
+```
+bt_download_url:
+  RedHat:
+    zh: http://download.bt.cn/install/install_6.0.sh
+    en: http://download.bt.cn/install/install_6.0_en.sh 
+  Debian:
+    zh: http://download.bt.cn/install/install-ubuntu_6.0.sh
+    en: http://download.bt.cn/install/install-ubuntu_6.0_en.sh
+```
+
 我们会定期检查版本准确性，并增加官方最新的stable版本，以保证用户可以顺利安装所需的宝塔版本。
 
 ## 安装指南
@@ -54,6 +66,3 @@ wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/i
 
 - 命令脚本部署与镜像部署有什么区别？请参考：[镜像部署-vs-脚本部署](https://support.websoft9.com/docs/faq/zh/bz-product.html#镜像部署-vs-脚本部署)
 - 本项目支持在 Ansible Tower 上运行吗？支持
-
-## To do
-

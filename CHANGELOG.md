@@ -1,15 +1,13 @@
 # CHANGELOG
 
-
-
 ## To do
 
+1. 设置登录密码为随机密码
 
 ## Logs
-* 2020-03  改写项目
 
 ### Bug Fixes
 
-
 ### Features
+* 2020-03-20  改写项目
 

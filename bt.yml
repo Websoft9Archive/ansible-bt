@@ -1,13 +1,13 @@
 ---
 # 核心任务
-- name: main
+- name: BT
   hosts: all
   become: yes
   become_method: sudo
   vars_files:
     - vars/main.yml
   vars_prompt:
-    - name: 'language_choose'
+    - name: 'language_selection'
       prompt: "Choose BT language \n
       1: Chinese (default)\n
       2: English\n"
@@ -15,11 +15,11 @@
       default: 1
 
   vars:
-     languagever:
+     language_select:
       '1': 'zh'
       '2': 'en'
 
-     language_ver: "{{languagever[language_choose]}}"
+     bt_language: "{{language_select[language_selection]}}"
 
   roles:  
     - { role: role_common, tags: "role_common"}
