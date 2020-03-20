@@ -1,5 +1,0 @@
----
-language_ver: zh
-
-#修改账号密码，用户名不得少于5个字符
-filelist: ["password.exp", "username.exp"]
