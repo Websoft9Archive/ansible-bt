@@ -41,8 +41,10 @@
   with_items: "{{bt_filelist}}"
   when: bt_language == 'zh'
 
+# this step may get error most of times
 - name: install bt, waiting for 5-10 mins
   command: expect /root/bt.exp
+  ignore_errors: yes
 
 - name: change username & password
   command: expect /root/{{item}}
