@@ -1,0 +1,2 @@
+common_install_PyPackages: False
+common_install_components: False
