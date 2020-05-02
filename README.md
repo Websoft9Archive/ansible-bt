@@ -24,7 +24,7 @@
 
 ## 本项目安装的是宝塔最新版吗？
 
-本项目是下载[BT官方脚本](https://www.bt.cn/download/linux.html)安装。 
+本项目是下载 [BT官方脚本](https://www.bt.cn/download/linux.html) 安装。 
 
 如需安装最新版本，请修改 bt role的变量文件 [main.yml](/roles/bt/defaults/main.yml) 中相关的下载地址
 
