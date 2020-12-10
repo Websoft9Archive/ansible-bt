@@ -55,6 +55,13 @@
 
 宝塔安装 LAMP 或 LNMP 的时候默认安装 phpMyAdmin
 
+#### 宝塔 Windows 面板的桌面客户端有什么作用？
+
+![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-wintools-websoft9.png)
+
+主要用于配置域名、安装授权、重置密码、启停宝塔服务等。
+
+
 #### 是否可以修改 BT 的源码路径？
 
 不可以

@@ -5,6 +5,7 @@ module.exports = [
     children: [
       '/zh/',
       '/zh/stack-deployment',
+      '/zh/stack-installation',
       '/zh/stack-components',
       '/zh/stack-accounts',
       ['https://support.websoft9.com/docs/faq/zh/tech-instance.html','云服务器'],
@@ -15,7 +16,6 @@ module.exports = [
     title: '宝塔 Linux 指南',
     collapsable: false,
     children: [
-      '/zh/stack-installation',
       '/zh/solution-installapps',
       '/zh/solution-ftp',
       '/zh/solution-more',
@@ -26,7 +26,6 @@ module.exports = [
     title: '宝塔 Windows 指南',
     collapsable: false,
     children: [
-      '/zh/win/stack-installation',
       '/zh/win/solution-installapps',
       '/zh/win/solution-ftp',
       '/zh/win/solution-more',

@@ -48,7 +48,7 @@ BT 域名绑定操作步骤：
 
 当忘记了宝塔Web端密码时，请远程桌面到Windows服务器，打开客户端->右上角菜单->修改密码 ，即可修改用户名和密码
 
-![](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/btwin-resetpw-websoft9.png)
+![宝塔Windows 重置密码](http://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-winresetpw-websoft9.png)
 
 ## 查看和管理日志文件
 
