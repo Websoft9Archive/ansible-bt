@@ -3,7 +3,7 @@
 在云服务器上部署 BT（Windows） 预装包之后，请参考下面的步骤快速入门。
 
 * Windows平台宝塔6.9及以上版本已与Linux平台的访问方式统一： [Linux初始化安装](/zh/stack-installation.md#准备)
-*下列内容是Windows平台宝塔6.9以下版本操作方式
+* 下列内容是Windows平台宝塔6.9以下版本操作方式
 
 ## 准备
 
