@@ -16,6 +16,7 @@
 
 ### Windows 版
 **宝塔6.9及以上版本**
+
 与Linux版本统一登录方式
 管理员用户名：`administrator`  
 管理员密码：`admin123`    
