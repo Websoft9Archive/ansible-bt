@@ -8,21 +8,25 @@
 
 支持 Windows Server 2008/2012/2016/2019 64位
 
+#### 宝塔的账号绑定是必须的吗？
+
+不是。您可以直接访问： *http://服务器公网IP:8888/soft* 绕开绑定。
+
 #### 宝塔 Linux 版 VS 宝塔 Window 版？
 
 下面按照操作系统的不同，将宝塔的功能清单做一个对比说明，供您参考：
 
 |  功能  |  Linux  |  Windows  |
 | --- | --- | --- |
-| 应用服务   |  Apache,Nginx,Tomcat,PM2  | Apache,Nginx,IIS   |
-|  程序语言  |   php5.2-php7.2,Java,Node.js |   php5.2-php7.2,.NET |
+| 应用服务   |  Apache, Nginx, Tomcat, OpenLiteSpeed  | Apache, Nginx, IIS   |
+|  程序语言  |   PHP5.2-php8.0, Java, Node |   PHP5.2-php8.0, Node |
 |   FTP |  Pure-Ftpd  |  FileZilla Server |
-|   数据库 |  MySQL,MariaDB,AliSQL  |  MySQL,SQLServer Express  |
+|   数据库 |  MySQL, MongoDB  |  MySQL, SQLServer Express, MongoDB  |
 |  数据库工具  | phpMyAdmin   |  phpMyAdmin  |
-|  缓存  |  Redis,Memcached  |  Redis,Memcached   |
+|  缓存  |  Redis, Memcached  |  Redis, Memcached   |
 | 外部存储接口    |  七牛云，阿里云，又拍云，FTP存储空间  | 阿里云，又拍云，FTP存储空间   |
 |  插件 |   宝塔运维，宝塔安全登录，云解析，PHP守护，宝塔跑分，宝塔一键迁移等 |  宝塔运维，宝塔安全登录，宝塔-主服务，宝塔一键部署源码，宝塔一键迁移等   |
-|  其他  |  Linux工具箱  | ImageMagick，Windows设置工具   |
+|  其他  |  Linux工具箱, Docker  | ImageMagick，Windows设置工具   |
 
 > 建议选更稳定可靠的 宝塔 Linux 版
 

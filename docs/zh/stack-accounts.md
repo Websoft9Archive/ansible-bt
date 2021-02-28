@@ -10,11 +10,11 @@
 
 > 密码安全性提示：初始密码仅为了简化首次登录，但默认密码并不安全，请登录后记得修改它。
 
-另外，如果根据以上账号无法登录后台，可能您安装的是旧版本（低于宝塔Windows版 V6.9），建议更换成新版本。若不便升级，请参考[旧版本 Windows 面板初始化指南](/zh/win/stack-installation.md)
+若以上账号无法登录后台，参考[旧版本 Windows 面板初始化指南](/zh/win/stack-installation.md)
 
 ## 操作系统
 
-### Linux
+## Linux
 
 * 主机地址：服务公网IP地址
 * 连接方式：云控制台在线SSH 或 SFTP客户端工具 或 SSH客户端工具
@@ -23,11 +23,12 @@
    |  云平台   |  管理员账号   | 其他|
    | --- | --- | --- |
    |  Azure   |  创建服务器的时候自行设置   | [如何开启root账户？](https://support.websoft9.com/docs/azure/zh/server-login.html#示例2：启用系统root账号) |
-   |  AWS Centos 系统   |  centos   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
+   |  AWS CentOS 系统   |  centos   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
+   |  AWS AmazonLinux 系统   | ec2-user   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号) |
    |  AWS Ubuntu 系统  |  ubuntu   | [如何开启root账户？](https://support.websoft9.com/docs/aws/zh/server-login.html#示例2：启用系统root账号)  |
    |  阿里云，华为云，腾讯云   |  root   | |
-
-### Windows
+   
+## Windows
 
 * 主机地址：服务公网IP地址
 * 连接方式：云控制台在线管理 或 远程桌面工具
@@ -37,3 +38,4 @@
    | --- | --- |
    |  Azure   |  创建服务器的时候自行设置   |
    |  AWS，阿里云，华为云，腾讯云   |  administrator   |
+

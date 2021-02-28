@@ -20,7 +20,10 @@ BT 部署到你的服务器后，即可开始使用：
 2. 输入默认账号密码（[不知道密码？](/zh/stack-accounts.md#bt)），进入宝塔后台
    ![BT 后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btlinux/bt-console-websoft9.png)
 
-  > 首次登录阅读并同意《用户协议》即可进入面板首页
+3. 如果出现下面的绑定宝塔账号提示，访问：*http://服务器公网IP:8888/soft* 即可绕开
+   ![BT 后台界面](https://libs.websoft9.com/Websoft9/DocsPicture/zh/btwin/bt-registerneed-websoft9.png)
+
+  > 绑定宝塔官方账号不是必须的步骤
 
 ## 升级
 

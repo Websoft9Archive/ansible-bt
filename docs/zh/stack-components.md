@@ -22,8 +22,8 @@ BT 预装包包含 BT 运行所需一序列支撑软件（简称为“组件”�
 
 *   安装目录：*C:\BtSoft\ServerAdmin*
 *   网站目录：*C:\wwwroot*
-*   MySQL目录：*C:\BtSoft\WebSoft\mysql*
-*   日志文件：*C:\BtSoft\WebSoft\apache\logs*
+*   MySQL 目录：*C:\BtSoft\mysql*
+*   Apache 日志文件：*C:\BtSoft\apache\logs*
 
 访问方式：Web面板 或 服务器客户端
 
@@ -31,16 +31,15 @@ BT 预装包包含 BT 运行所需一序列支撑软件（简称为“组件”�
 
 在云服务器中，通过 **[安全组设置](https://support.websoft9.com/docs/faq/zh/tech-instance.html)** 来控制（开启或关闭）端口是否可以被外部访问。 
 
-本应用建议开启的端口如下：
+通过命令`netstat -tunlp` 看查看相关端口，下面列出可能要用到的端口：
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
 | HTTP | 80 | 通过 HTTP 访问你的网站 | 必须 |
 | HTTPS | 443 | 通过 HTTPS 访问你的网站 | 可选 |
 | BT| 8888 | 访问 宝塔 Linux 版的管理界面 | 必须 |
-| BT | 888 | 访问 宝塔 Windows 版的管理界面 | 必须 |
 | MySQL | 3306 | 远程连接 MySQL | 可选 |
 
 ## 版本号
 
-组件版本号可以宝塔控制台查看
+组件版本号可以宝塔控制台查看。
