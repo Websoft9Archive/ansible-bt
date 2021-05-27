@@ -58,7 +58,16 @@
   file:
     path: /www/server/panel/data/admin_path.pl
     state: absent
-    
+
+- name: Create log folder because bt is before the common
+  file:
+    path: '/data/{{item}}'
+    state: directory
+    recurse: yes
+    mode: '0755'
+  with_items:
+    - logs
+
  - name: Check Canvas Version
    shell: sudo echo "bt version:" $(curl -Ss http://www.bt.cn/api/panel/get_version) |sudo  tee -a /data/logs/install_version.txt
 

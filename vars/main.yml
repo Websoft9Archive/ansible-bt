@@ -1,3 +1,13 @@
 common_install_python_modules: False
 common_install_components: False
 common_os_support: ["CentOS", "Ubuntu", "Amazon", "OracleLinux"]
+
+init_application:
+  bt:
+    username: administrator
+    password: "123456"
+    service_before: bt.service
+    commands:
+      - sudo su
+      - cd /www/server/panel
+      - python tools.py panel $new_password
