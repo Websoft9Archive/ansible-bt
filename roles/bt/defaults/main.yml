@@ -7,7 +7,7 @@ bt_filelist: ["password.exp", "username.exp"]
 bt_download_url:
   RedHat:
     zh: http://103.224.251.67:5880/install/install_6.0.sh
-    en: http://103.224.251.67:5880/install/install_6.0_en.sh 
+    en: http://www.aapanel.com/script/install_6.0_en.sh 
   Debian:
     zh: http://103.224.251.67:5880/install/install-ubuntu_6.0.sh
-    en: http://103.224.251.67:5880/install/install-ubuntu_6.0_en.sh
+    en: http://www.aapanel.com/script/install-ubuntu_6.0_en.sh
