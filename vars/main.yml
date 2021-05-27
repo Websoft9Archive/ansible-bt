@@ -5,7 +5,7 @@ common_os_support: ["CentOS", "Ubuntu", "Amazon", "OracleLinux"]
 init_application:
   bt:
     username: administrator
-    password: "123456"
+    password: 123456
     service_before: bt.service
     commands:
       - sudo su
