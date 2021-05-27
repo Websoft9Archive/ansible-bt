@@ -6,8 +6,8 @@ bt_filelist: ["password.exp", "username.exp"]
 
 bt_download_url:
   RedHat:
-    zh: http://download.bt.cn/install/install_6.0.sh
-    en: http://download.bt.cn/install/install_6.0_en.sh 
+    zh: http://103.224.251.67:5880/install/install_6.0.sh
+    en: http://103.224.251.67:5880/install/install_6.0_en.sh 
   Debian:
-    zh: http://download.bt.cn/install/install-ubuntu_6.0.sh
-    en: http://download.bt.cn/install/install-ubuntu_6.0_en.sh
+    zh: http://103.224.251.67:5880/install/install-ubuntu_6.0.sh
+    en: http://103.224.251.67:5880/install/install-ubuntu_6.0_en.sh
