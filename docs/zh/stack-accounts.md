@@ -4,8 +4,8 @@
 
 ## BT
 
-* 管理员用户名：`administrator`  
-* 管理员密码：`admin123`    
+* 管理员账号: `Administrator`
+* 管理员密码: 存储在您的服务器中的文件中 */credentials/password.txt*  
 * 登录地址：*http://服务器公网IP:8888*
 
 > 密码安全性提示：初始密码仅为了简化首次登录，但默认密码并不安全，请登录后记得修改它。
