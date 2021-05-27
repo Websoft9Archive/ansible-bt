@@ -1,5 +1,5 @@
 common_install_python_modules: False
-common_install_components: False
+common_install_components: True
 common_os_support: ["CentOS", "Ubuntu", "Amazon", "OracleLinux"]
 
 init_application:
