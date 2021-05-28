@@ -44,12 +44,12 @@
 # this step may get error most of times
 - name: install bt, waiting for 5-10 mins
   command: expect /root/bt.exp
-  ignore_errors: yes
+  failed_when: False
 
 - name: change username & password
   command: expect /root/{{item}}
   with_items: "{{bt_filelist}}"
-  ignore_errors: yes
+  failed_when: False
 
 - name: remove extra files 
   shell: rm -f item /root/*
