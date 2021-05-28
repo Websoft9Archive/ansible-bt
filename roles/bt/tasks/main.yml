@@ -46,7 +46,6 @@
   shell: |
     cd /root
     echo "y" |bash install.sh
-  ignore_errors: yes
 
 - name: change username & password
   command: expect /root/{{item}}
