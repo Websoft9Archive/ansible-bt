@@ -43,7 +43,9 @@
 
 # this step may get error most of times
 - name: install bt, waiting for 5-10 mins
-  command: expect /root/bt.exp
+  shell: |
+    cd /root
+    echo "y" |bash install.sh
   ignore_errors: yes
 
 - name: change username & password
