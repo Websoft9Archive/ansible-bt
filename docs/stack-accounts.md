@@ -6,8 +6,8 @@ These accounts are required for aaPanel image installation and configuration
 
 Following is the default Administrator account of aaPanel: 
 
-* aaPanel administrator username: `Administrator`
-* aaPanel administrator password: stored in the file of your server */credentials/password.txt*
+* Administrator username: administrator
+* Administrator password: admin123
 
 aaPanel log in URL: *http://Internet IP:8888*
 
