@@ -4,7 +4,7 @@
 
 ## BT
 
-* 管理员用户名：administrator 或 admin
+* 管理员用户名：administrator
 * 管理员密码：admin123
 * 登录方式：http://服务器公网IP:8888
 
